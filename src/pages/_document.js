@@ -6,8 +6,8 @@ class MyDocument extends Document {
       <Html>
         <Head>
           <meta
-            name="description"
-            content="This site will fly high 🦤"
+            name="The Realms DAO"
+            content="Community Owned 1/1 Collection"
           />
           <link rel="icon" href="/favicon.ico" />
 

@@ -10,7 +10,7 @@ import { NftCard } from "./NftCard";
 import styles from "./index.module.css";
 const walletPublicKey = "ATh5Q48kxcqYTsL9XJmxSMUKyGfN8gaq4J5DCKpz8EWF";
 
-export const RealmsGallery: FC = ({}) => {
+export const CommunityGallery: FC = ({}) => {
   const { connection } = useConnection();
   const [walletToParsePublicKey, setWalletToParsePublicKey] =
     useState<string>(walletPublicKey);

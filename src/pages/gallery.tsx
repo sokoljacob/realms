@@ -1,15 +1,15 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { RealmsGallery } from "../views";
+import { CommunityGallery } from "../views";
 
 const Home: NextPage = (props) => {
   return (
     <div>
       <Head>
-        <title>NFT Gallery!</title>
-        <meta name="description" content="This site will fly high 🦤" />
+        <title>The Realms DAO | Community Gallery</title>
+        <meta name="The Realms DAO" content="Community Owned 1/1 Collection" />
       </Head>
-      <RealmsGallery />
+      <CommunityGallery />
     </div>
   );
 };

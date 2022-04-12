@@ -6,11 +6,8 @@ const Home: NextPage = (props) => {
   return (
     <div>
       <Head>
-        <title>Caw Caw!</title>
-        <meta
-          name="description"
-          content="This site will fly high 🦤"
-        />
+        <title>The Realms DAO | Home</title>
+        <meta name="The Realms DAO" content="Community Owned 1/1 Collection" />
       </Head>
       <HomeView />
     </div>
