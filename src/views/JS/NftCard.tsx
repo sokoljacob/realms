@@ -39,8 +39,8 @@ export const NftCard: FC<Props> = ({
   const onImageError = () => setFallbackImage(true);
   const { image } = data ?? {};
 
-  if(!image || name === 'EXCHANGE NOTIFICATION NFT' || name === 'Realms #19 x Atoll'){
-    return ( null );
+  if(!image || name === 'EXCHANGE NOTIFICATION NFT'){
+      return ( null );
   } else {
     return (
       <div className={`card bordered max-w-xs compact rounded-md`}>

@@ -1,14 +1,14 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { CommunityGallery } from "../views";
+import { Realms } from "../views";
 
 const Home: NextPage = (props) => {
   return (
     <div>
       <Head>
-        <title>THE REALMS DAO | COMMUNITY GALLERY</title>
+        <title>THE REALMS DAO | REALMS</title>
       </Head>
-      <CommunityGallery />
+      <Realms />
     </div>
   );
 };

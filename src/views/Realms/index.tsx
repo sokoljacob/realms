@@ -8,9 +8,9 @@ import { useConnection } from "@solana/wallet-adapter-react";
 import { Loader } from "components";
 import { NftCard } from "./NftCard";
 import styles from "./index.module.css";
-const walletPublicKey = "ATh5Q48kxcqYTsL9XJmxSMUKyGfN8gaq4J5DCKpz8EWF";
+const walletPublicKey = "BZDdGRh85aj8TFRGFziN7f2qaPNn3RfSNq1m5dXfzKZS";
 
-export const CommunityGallery: FC = ({}) => {
+export const Realms: FC = ({}) => {
   const { connection } = useConnection();
   const [walletToParsePublicKey, setWalletToParsePublicKey] =
     useState<string>(walletPublicKey);
@@ -22,18 +22,7 @@ export const CommunityGallery: FC = ({}) => {
   });
 
   console.log("nfts", nfts);
-
-  const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { value } = e.target;
-    setWalletToParsePublicKey(value.trim());
-  };
-
-  const onUseWalletClick = () => {
-    if (publicKey) {
-      setWalletToParsePublicKey(publicKey?.toBase58());
-    }
-  };
-
+ 
   return (
     <div className="container mx-auto max-w-6xl p-8 2xl:px-0">
       <div className={styles.container}>
@@ -42,7 +31,7 @@ export const CommunityGallery: FC = ({}) => {
             <div className="text-center hero-content w-full">
               <div className="w-full">
                 <h1 className="mb-5 text-5xl">
-                  COMMUNITY GALLERY
+                  Realms
                 </h1>
                 <div className="my-10">
                   {error ? (
