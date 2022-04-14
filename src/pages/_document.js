@@ -19,7 +19,7 @@ class MyDocument extends Document {
             <div className="text-center">
               <h1 className="mb-5 text-5xl font-bold">THE REALMS DAO</h1>
             </div>
-            <div className="text-center pt-2">
+            {/* <div className="text-center pt-2">
               <div className="text-center">
                 <table className="navTable">
                   <tr>
@@ -38,7 +38,7 @@ class MyDocument extends Document {
                   </tr>
                 </table>
               </div>
-            </div>
+            </div> */}
           </div>
           <Main />
           <NextScript />
