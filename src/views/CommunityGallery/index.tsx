@@ -14,57 +14,42 @@ export const CommunityGallery: FC = ({}) => {
   const { connection } = useConnection();
   const [walletToParsePublicKey, setWalletToParsePublicKey] =
     useState<string>(walletPublicKey);
-  const { publicKey } = useWallet();
 
   const { nfts, isLoading, error } = useWalletNfts({
     publicAddress: walletToParsePublicKey,
     connection,
   });
 
+
   console.log("nfts", nfts);
 
-  const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { value } = e.target;
-    setWalletToParsePublicKey(value.trim());
-  };
-
-  const onUseWalletClick = () => {
-    if (publicKey) {
-      setWalletToParsePublicKey(publicKey?.toBase58());
-    }
-  };
-
   return (
-    <div className="container mx-auto max-w-6xl p-8 2xl:px-0">
-      <div className={styles.container}>
-        <div className="text-center pt-2">
-          <div className="hero min-h-16 p-0 pt-10">
-            <div className="text-center hero-content w-full">
-              <div className="w-full">
-                <h1 className="mb-5 text-5xl">
-                  COMMUNITY GALLERY
-                </h1>
-                <div className="my-10">
-                  {error ? (
-                    <div>
-                      <h1>Error Occured</h1>
-                      {(error as any)?.message}
-                    </div>
-                  ) : null}
+    <div className="container mx-auto 2xl:px-0">
+        <div className="hero min-h-16 p-0">
+          <div className="text-center hero-content w-full">
+            <div className="w-full">
+              <h1 className="mb-5 text-3xl font-bold">
+                COMMUNITY GALLERY
+              </h1>
+              <div className="my-10">
+                {error ? (
+                  <div>
+                    <h1>Error Occured</h1>
+                    {(error as any)?.message}
+                  </div>
+                ) : null}
 
-                  {!error && isLoading ? (
-                    <div>
-                      <Loader />
-                    </div>
-                  ) : (
-                    <NftList nfts={nfts} error={error} />
-                  )}
-                </div>
+                {!error && isLoading ? (
+                  <div>
+                    <Loader />
+                  </div>
+                ) : (
+                  <NftList nfts={nfts} error={error} />
+                )}
               </div>
             </div>
           </div>
         </div>
-      </div>
     </div>
   );
 };
@@ -82,7 +67,7 @@ const NftList = ({ nfts, error }: NftListProps) => {
   if (!nfts?.length) {
     return (
       <div className="text-center text-2xl pt-16">
-        No NFTs found in this wallet
+        No NFTs found
       </div>
     );
   }

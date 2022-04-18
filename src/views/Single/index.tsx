@@ -8,28 +8,28 @@ import { useConnection } from "@solana/wallet-adapter-react";
 import { Loader } from "components";
 import { NftCard } from "./NftCard";
 import styles from "./index.module.css";
-const walletPublicKey = "Dc2vbnV1mEkkEapiTcKfa477FrKja2A4p71Frh5m6GKx";
+const walletPublicKey = "ATh5Q48kxcqYTsL9XJmxSMUKyGfN8gaq4J5DCKpz8EWF";
 
-export const JS: FC = ({}) => {
+export const Single: FC = ({}) => {
   const { connection } = useConnection();
   const [walletToParsePublicKey, setWalletToParsePublicKey] =
     useState<string>(walletPublicKey);
-  const { publicKey } = useWallet();
 
   const { nfts, isLoading, error } = useWalletNfts({
     publicAddress: walletToParsePublicKey,
     connection,
   });
 
+
   console.log("nfts", nfts);
- 
+
   return (
     <div className="container mx-auto 2xl:px-0">
         <div className="hero min-h-16 p-0">
           <div className="text-center hero-content w-full">
             <div className="w-full">
               <h1 className="mb-5 text-3xl font-bold">
-                JS'S PERSONAL GALLERY
+                COMMUNITY GALLERY
               </h1>
               <div className="my-10">
                 {error ? (
@@ -67,7 +67,7 @@ const NftList = ({ nfts, error }: NftListProps) => {
   if (!nfts?.length) {
     return (
       <div className="text-center text-2xl pt-16">
-        No NFTs found in this wallet
+        No NFTs found
       </div>
     );
   }

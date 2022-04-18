@@ -4,6 +4,10 @@ import { EyeOffIcon } from "@heroicons/react/outline";
 
 import { fetcher } from "utils/fetcher";
 
+import ArtistData from './artists.json';
+import PieceData from './pieces.json';
+
+
 type Props = {
   details: any;
   onSelect: (id: string) => void;
@@ -16,6 +20,7 @@ export const NftCard: FC<Props> = ({
   onTokenDetailsFetched = () => {},
 }) => {
   const [fallbackImage, setFallbackImage] = useState(false);
+  const { updateAuthority, mint } = details ?? {};
   const { name, uri } = details?.data ?? {};
 
   const { data, error } = useSWR(
@@ -37,20 +42,49 @@ export const NftCard: FC<Props> = ({
   }, [data, error]);
 
   const onImageError = () => setFallbackImage(true);
-  const { image } = data ?? {};
+  const { image, description } = data ?? {};
+
+   function getPieceDetails(ua : any, mint: any){
+      let artist = ArtistData.find((artist: any) => artist.id === ua); 
+      let piece = PieceData.find((piece: any) => piece.id === mint); 
+      var details = "";
+      if(artist?.name){
+        details += "Artist: ";
+        if (artist?.twitter) details += "<a href='https://www.twitter.com/" + artist?.twitter + "' target='_blank'>";
+        details += artist?.name;
+        if (artist?.twitter) details += "</a>";
+      } 
+      if(piece?.collection){
+        details += "<br />Collection: ";
+        if (piece?.collectionurl) details += "<a href='" + piece?.collectionurl + "' target='_blank'>";
+        details += piece?.collection;
+        if (piece?.collectionurl) details += "</a>";
+      }
+      if(piece?.acqdate){
+        details += "<br />Acquired: ";
+        details += piece?.acqdate;
+      }
+      if(piece?.acqprice){
+        details += "<br />Cost: ";
+        details += piece?.acqprice;
+      }
+      return details;
+  }
 
   if(!image || name === 'EXCHANGE NOTIFICATION NFT' || name === 'Realms #19 x Atoll'){
     return ( null );
   } else {
     return (
-      <div className={`card bordered max-w-xs compact rounded-md`}>
+      <div className={`max-w-xs compact`}>
         <figure className="min-h-16 animation-pulse-color">
           {!fallbackImage || !error ? (
-            <img
-              src={image}
-              onError={onImageError}
-              className="bg-gray-800 object-cover"
-            />
+            <a href={"/single/" + mint}>
+              <img
+                src={image}
+                onError={onImageError}
+                className="bg-gray-800 object-cover"
+              />
+            </a>
           ) : (
             // Fallback when preview isn't available
             // This could be broken image, video, or audio
@@ -59,8 +93,9 @@ export const NftCard: FC<Props> = ({
             </div>
           )}
         </figure>
-        <div className="card-body">
-          <h2 className="card-title text-sm text-left">{name}</h2>
+        <div className="piece-body">
+          <h2 className="text-center font-bold">{name}</h2>
+          <div className="text-center" dangerouslySetInnerHTML={{ __html: getPieceDetails(updateAuthority,mint) }} />
         </div>
       </div>
     );

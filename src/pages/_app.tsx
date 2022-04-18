@@ -3,6 +3,7 @@ import type { AppProps } from "next/app";
 import dynamic from "next/dynamic";
 import { ConnectionProvider } from "@solana/wallet-adapter-react";
 import Link from "next/link";
+import Head from "next/head";
 
 import "tailwindcss/tailwind.css";
 import "../styles/globals.css";
@@ -29,14 +30,39 @@ const closeNav = () => {
   document.getElementById("nav")!.style.width = "0";
 };
 
+const setColorMode = () => {
+  if('dark-mode' in localStorage) {
+    localStorage.removeItem("dark-mode");
+    document.documentElement.classList.remove('dark');
+  } else {
+    localStorage.setItem('dark-mode','yes')
+    document.documentElement.classList.add('dark');
+  }
+}
+
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
+      <Head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+                if('dark-mode' in localStorage){
+                  document.documentElement.classList.add('dark');
+                } else {
+                  document.documentElement.classList.remove('dark');
+                }
+                `,
+          }}
+        ></script>
+      </Head>
       <div className="navMenu">
+        <span id="modeBtn" onClick={setColorMode}>&#9728;</span>
+        &nbsp;&nbsp;
         <span onClick={openNav}>&#9776;</span>
       </div>
       <div id="nav" className="sidenav">
-        <Link href="javascript:void(0)"><a onClick={closeNav} className="closebtn">&times;</a></Link>
+        <Link href=""><a onClick={closeNav} className="closebtn">&times;</a></Link>
         <Link href="/"><a onClick={closeNav}>HOME</a></Link>
         <Link href="/realms"><a onClick={closeNav}>REALMS</a></Link>
         <Link href="/gallery"><a onClick={closeNav}>COMMUNITY GALLERY</a></Link>

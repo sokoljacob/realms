@@ -1,86 +1,75 @@
-import Link from "next/link";
 import { FC, useState } from "react";
-import { useWallet } from "@solana/wallet-adapter-react";
-import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
-import { useWalletNfts, NftTokenAccount } from "@nfteyez/sol-rayz-react";
-import { useConnection } from "@solana/wallet-adapter-react";
-
-import { Loader } from "components";
-import { NftCard } from "./NftCard";
+import RealmsData from './realms.json';
 import styles from "./index.module.css";
-const walletPublicKey = "BZDdGRh85aj8TFRGFziN7f2qaPNn3RfSNq1m5dXfzKZS";
+
 
 export const Realms: FC = ({}) => {
-  const { connection } = useConnection();
-  const [walletToParsePublicKey, setWalletToParsePublicKey] =
-    useState<string>(walletPublicKey);
-  const { publicKey } = useWallet();
 
-  const { nfts, isLoading, error } = useWalletNfts({
-    publicAddress: walletToParsePublicKey,
-    connection,
-  });
+  function getRealmTitle(realm : any){
+    var title = "#" + realm.number;
+    if (realm?.collabartist){
+      title += " x ";
+      if (realm?.collabartisttwitter) title += "<a href='https://www.twitter.com/" + realm?.collabartisttwitter+ "' target='_blank'>";
+      title += realm?.collabartist;
+      if (realm?.collabartisttwitter) title += "</a>";
+    }
+    return title;
+  }
 
-  console.log("nfts", nfts);
- 
+  function getRealmDetails(realm: any){
+    
+    var details = "";
+    if(realm?.unreleased){
+      details = "Unreleased";
+    }
+    else {
+      if(realm?.owner){
+        details = "Owned by: ";
+        if (realm?.ownertwitter) details += "<a href='https://www.twitter.com/" + realm?.ownertwitter+ "' target='_blank'>";
+        details += realm?.owner;
+        if (realm?.ownertwitter) details += "</a>";
+        if(realm?.ownerpersonalgal){
+          details += "<br /><a href='/" + realm?.ownerpersonalgal + "'>";
+          details += realm?.owner;
+          details += "'s Personal Gallery";
+          details += "</a>";
+        }
+      }
+    }
+
+    return details;
+  }
+
   return (
-    <div className="container mx-auto max-w-6xl p-8 2xl:px-0">
-      <div className={styles.container}>
-        <div className="text-center pt-2">
-          <div className="hero min-h-16 p-0 pt-10">
-            <div className="text-center hero-content w-full">
-              <div className="w-full">
-                <h1 className="mb-5 text-5xl">
-                  Realms
-                </h1>
-                <div className="my-10">
-                  {error ? (
-                    <div>
-                      <h1>Error Occured</h1>
-                      {(error as any)?.message}
-                    </div>
-                  ) : null}
-
-                  {!error && isLoading ? (
-                    <div>
-                      <Loader />
-                    </div>
-                  ) : (
-                    <NftList nfts={nfts} error={error} />
-                  )}
+    <div className="container mx-auto 2xl:px-0">
+        <div className="hero min-h-16 p-0">
+          <div className="text-center hero-content w-full">
+            <div className="w-full">
+              <h1 className="mb-5 text-3xl font-bold">
+                REALMS
+              </h1>
+              <div className="my-10">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 items-start">
+                  {
+                    RealmsData.map( realm => {
+                      return (
+                        <div className="max-w-xs compact" key={ realm.id }>
+                          <figure className="min-h-16 animation-pulse-color">
+                              <img src={ "/realmthumbs/" + realm.thumb } className="bg-gray-800 object-cover" />
+                          </figure>
+                          <div className="piece-body">
+                            <h2 className="piece-title text-center" dangerouslySetInnerHTML={{ __html: getRealmTitle(realm) }}></h2>
+                            <div className="text-center" dangerouslySetInnerHTML={{ __html: getRealmDetails(realm) }} />
+                          </div>
+                        </div>
+                      )
+                    } )
+                  }
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  );
-};
-
-type NftListProps = {
-  nfts: NftTokenAccount[];
-  error?: Error;
-};
-
-const NftList = ({ nfts, error }: NftListProps) => {
-  if (error) {
-    return null;
-  }
-
-  if (!nfts?.length) {
-    return (
-      <div className="text-center text-2xl pt-16">
-        No NFTs found in this wallet
-      </div>
-    );
-  }
-
-  return (
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 items-start">
-      {nfts?.map((nft) => (
-        <NftCard key={nft.mint} details={nft} onSelect={() => {}} />
-      ))}
     </div>
   );
 };

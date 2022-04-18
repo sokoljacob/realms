@@ -15,33 +15,35 @@ class MyDocument extends Document {
           <link rel="manifest" href="/site.webmanifest" />
         </Head>
         <body>
-        <div className="container mx-auto max-w-6xl p-8 2xl:px-0">
-            <div className="text-center">
-              <h1 className="mb-5 text-5xl font-bold">THE REALMS DAO</h1>
-            </div>
-            {/* <div className="text-center pt-2">
+          <div className="bg-container">
+            <div className="container mx-auto max-w-6xl p-8 2xl:px-0">
               <div className="text-center">
-                <table className="navTable">
-                  <tr>
-                    <td className="navTableItem">
-                      <Link href="/">HOME</Link>
-                    </td>
-                    <td className="navTableItem">
-                      <Link href="/realms">REALMS</Link>
-                    </td>
-                    <td className="navTableItem">
-                      <Link href="/gallery">COMMUNITY GALLERY</Link>
-                    </td>
-                    <td className="navTableItem">
-                      <Link href="/js">JOIN</Link>
-                    </td>
-                  </tr>
-                </table>
+                <h1 className="text-5xl font-bold header"><Link href="/">THE REALMS DAO</Link></h1>
               </div>
-            </div> */}
-          </div>
+              {/* <div className="text-center pt-2">
+                <div className="text-center">
+                  <table className="navTable">
+                    <tr>
+                      <td className="navTableItem">
+                        <Link href="/">HOME</Link>
+                      </td>
+                      <td className="navTableItem">
+                        <Link href="/realms">REALMS</Link>
+                      </td>
+                      <td className="navTableItem">
+                        <Link href="/gallery">COMMUNITY GALLERY</Link>
+                      </td>
+                      <td className="navTableItem">
+                        <Link href="/js">JOIN</Link>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </div> */}
+            </div>
           <Main />
           <NextScript />
+          </div>
         </body>
       </Html>
     );

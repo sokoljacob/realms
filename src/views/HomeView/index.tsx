@@ -8,8 +8,12 @@ export const HomeView: FC = ({}) => {
   const { publicKey } = useWallet();
   
   return (
-    <div className="homeBg">
-      <div className="rightcontent">
+    <div className="home-content">
+      <div className="left-home-image">
+        <img id="homewhiteimg" src="/homebg-white.png"></img>
+        <img id="homedarkimg" src="/homebg-dark.png"></img>
+      </div>
+      <div className="right-content">
         <h1 className="mb-5 text-3xl font-bold">What is Realms?</h1>
         <div className="indent font-bold">Realms is a 118 piece 1/1 Solana NFT collection. Holding a Realm is your entry into the community fund. The fund is used for a community curated collection of 1/1 art. Together, we will curate one of the most exclusive and sought Solana 1/1 collections…</div>
         <br />
