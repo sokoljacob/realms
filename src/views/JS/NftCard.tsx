@@ -49,11 +49,13 @@ export const NftCard: FC<Props> = ({
         <figure className="min-h-16 animation-pulse-color">
           {!fallbackImage || !error ? (
             <a href={"/single/" + mint}>
-              <img
-                src={image}
-                onError={onImageError}
-                className="bg-gray-800 object-cover"
-              />
+              <div className="hover-zoom-wrapper">
+                <img
+                  src={image}
+                  onError={onImageError}
+                  className="bg-gray-800 object-cover hover-zoom"
+                />
+              </div>
             </a>
           ) : (
             // Fallback when preview isn't available

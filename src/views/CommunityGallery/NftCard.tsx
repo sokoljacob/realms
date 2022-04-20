@@ -4,7 +4,6 @@ import { EyeOffIcon } from "@heroicons/react/outline";
 
 import { fetcher } from "utils/fetcher";
 
-import ArtistData from './artists.json';
 import PieceData from './pieces.json';
 
 
@@ -44,15 +43,14 @@ export const NftCard: FC<Props> = ({
   const onImageError = () => setFallbackImage(true);
   const { image, description } = data ?? {};
 
-   function getPieceDetails(ua : any, mint: any){
-      let artist = ArtistData.find((artist: any) => artist.id === ua); 
+   function getPieceDetails(mint: any){
       let piece = PieceData.find((piece: any) => piece.id === mint); 
       var details = "";
-      if(artist?.name){
+      if(piece?.artist){
         details += "Artist: ";
-        if (artist?.twitter) details += "<a href='https://www.twitter.com/" + artist?.twitter + "' target='_blank'>";
-        details += artist?.name;
-        if (artist?.twitter) details += "</a>";
+        if (piece?.artisttwitter) details += "<a href='https://www.twitter.com/" + piece?.artisttwitter + "' target='_blank'>";
+        details += piece?.artist;
+        if (piece?.artisttwitter) details += "</a>";
       } 
       if(piece?.collection){
         details += "<br />Collection: ";
@@ -71,6 +69,12 @@ export const NftCard: FC<Props> = ({
       return details;
   }
 
+  function getImageThumb(mint: any){
+    let piece = PieceData.find((piece: any) => piece.id === mint); 
+    if (piece?.thumb) return "gallerythumbs/" + piece?.thumb
+    return image
+  }
+
   if(!image || name === 'EXCHANGE NOTIFICATION NFT' || name === 'Realms #19 x Atoll'){
     return ( null );
   } else {
@@ -79,11 +83,13 @@ export const NftCard: FC<Props> = ({
         <figure className="min-h-16 animation-pulse-color">
           {!fallbackImage || !error ? (
             <a href={"/single/" + mint}>
-              <img
-                src={image}
-                onError={onImageError}
-                className="bg-gray-800 object-cover"
-              />
+              <div className="hover-zoom-wrapper">
+                <img
+                  src={ getImageThumb(mint) }
+                  onError={onImageError}
+                  className="bg-gray-800 object-cover hover-zoom"
+                />
+              </div>
             </a>
           ) : (
             // Fallback when preview isn't available
@@ -95,7 +101,7 @@ export const NftCard: FC<Props> = ({
         </figure>
         <div className="piece-body">
           <h2 className="text-center font-bold">{name}</h2>
-          <div className="text-center" dangerouslySetInnerHTML={{ __html: getPieceDetails(updateAuthority,mint) }} />
+          <div className="text-center" dangerouslySetInnerHTML={{ __html: getPieceDetails(mint) }} />
         </div>
       </div>
     );

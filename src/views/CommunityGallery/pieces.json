@@ -1,6 +1,9 @@
 [
     {
         "id": "2chB8aDUGPMz2Jfg622iqY5k4xdoSB2nSb7Mb3MCBzNG",
+        "thumb": "realms.png",
+        "artist": "Sol Cultures",
+        "artisttwitter": "SolCultures",
         "collection": "",
         "collectionurl": "",
         "acqdate": "08 February 2022",
@@ -8,6 +11,9 @@
     },
     {
         "id": "GpAAwxueSiiWzypbqqwvToaPRKz61FDBPNwD3L7K7oTx",
+        "thumb": "theplains.png",
+        "artist": "Phib",
+        "artisttwitter": "PhibDoesThis",
         "collection": "Paper Worlds",
         "collectionurl": "https://exchange.art/series/Paper%20Worlds/nfts",
         "acqdate": "09 February 2022",
@@ -15,6 +21,9 @@
     },
     {
         "id": "FycMwHuQ7BLAPRDicje4UJG6p93yXr2U3DRfkk83GrkZ",
+        "thumb": "zirra.png",
+        "artist": "JMY",
+        "artisttwitter": "jimmy_agustyan",
         "collection": "",
         "collectionurl": "",
         "acqdate": "10 February 2022",
@@ -22,6 +31,9 @@
     },
     {
         "id": "2EyNhHkYLjCTZfzkzMSCidSafzWxGpyb8BfR1xRKR5GD",
+        "thumb": "theideaofyou.png",
+        "artist": "McNatt",
+        "artisttwitter": "itsMcNatt",
         "collection": "Scratches",
         "collectionurl": "https://exchange.art/series/Scratches/nfts",
         "acqdate": "12 February 2022",
@@ -29,6 +41,9 @@
     },
     {
         "id": "CH191a3PfK2mV9rUrDNqC4VebEm2V1RxxSA3KFhTBEw6",
+        "thumb": "cityofthesea.png",
+        "artist": "BadGnomen",
+        "artisttwitter": "BadGnomen",
         "collection": "Origins",
         "collectionurl": "https://exchange.art/series/Origins/nfts",
         "acqdate": "17 February 2022",
@@ -36,6 +51,9 @@
     },
     {
         "id": "8P59e2gutPeEShJrUGa8XjXyokYsLmYJcgVZLxaGmXiK",
+        "thumb": "dispatch11.png",
+        "artist": "Highway",
+        "artisttwitter": "HighwayNFT",
         "collection": "DUST",
         "collectionurl": "https://exchange.art/series/DUST%2077/nfts",
         "acqdate": "17 February 2022",
@@ -43,6 +61,9 @@
     },
     {
         "id": "CDbKY8sZFZKUr7PwKC3cKS6upnadMg7QVc7SXNCMfdxL",
+        "thumb": "diamond1.png",
+        "artist": "Lights",
+        "artisttwitter": "LIGHTS_nft",
         "collection": "Diamonds",
         "collectionurl": "https://exchange.art/series/Diamonds/nfts",
         "acqdate": "22 February 2022",
@@ -50,6 +71,9 @@
     },
     {
         "id": "EQYgdw1Zk3CmRdjJYK85UfNm1JKM2TB921repE4r9fod",
+        "thumb": "unforgettablefire.png",
+        "artist": "Lights",
+        "artisttwitter": "LIGHTS_nft",
         "collection": "In Gods Country",
         "collectionurl": "https://exchange.art/series/In%20God's%20Country/nfts",
         "acqdate": "23 February 2022",
@@ -57,6 +81,9 @@
     },
     {
         "id": "BwNn4a2wetZA12dkhuptKQULYe89pQrprDJZqFh1dWmj",
+        "thumb": "douglas015.png",
+        "artist": "Douglas McCurdy",
+        "artisttwitter": "douglasrmccurdy",
         "collection": "Hoop World Vol. 1",
         "collectionurl": "https://exchange.art/series/Hoop%20World%20Vol.%201/nfts",
         "acqdate": "28 February 2022",
@@ -64,6 +91,9 @@
     },
     {
         "id": "F19G4Wfp1oyEMK2f82GMfU9BbShFXXUg8r94TvrK42PT",
+        "thumb": "thelastcall.png",
+        "artist": "Uyab",
+        "artisttwitter": "u__y__a__b",
         "collection": "",
         "collectionurl": "",
         "acqdate": "01 March 2022",
@@ -71,6 +101,9 @@
     },
     {
         "id": "DnkKZBEXocftuo9yN9jLJqjn6QS6ppQBeEgUtXYf3vy6",
+        "thumb": "lurkers3.png",
+        "artist": "iamlaurael",
+        "artisttwitter": "iamlaurael",
         "collection": "The Lurkers",
         "collectionurl": "https://exchange.art/series/The%20Lurkers/nfts",
         "acqdate": "03 March 2022",
@@ -78,6 +111,9 @@
     },
     {
         "id": "7NnXCjegedP38WbYGKS59bvUm97CENMbjy4oESkhWmBR",
+        "thumb": "bskt6.png",
+        "artist": "Basket",
+        "artisttwitter": "basketNFT",
         "collection": "BSKT",
         "collectionurl": "https://exchange.art/series/BSKT/nfts",
         "acqdate": "10 March 2022",
@@ -85,6 +121,9 @@
     },
     {
         "id": "4RpyqmJjaUzADZDue87DQnvfhkLmmpiQ28D7BLek2TPS",
+        "thumb": "solace.png",
+        "artist": "Archie Morley",
+        "artisttwitter": "archmorley",
         "collection": "Fragmented Expressions",
         "collectionurl": "https://formfunction.xyz/@archie/series/fragmented-expressions",
         "acqdate": "17 March 2022",
@@ -92,6 +131,9 @@
     },
     {
         "id": "FoA4jp3Vv7GXN4YLHTdQPQA88iBYoUL4ghAvz9A2HeRr",
+        "thumb": "boatman.png",
+        "artist": "Kratt Studio",
+        "artisttwitter": "KrattStudio",
         "collection": "Divided",
         "collectionurl": "https://exchange.art/series/Divided/nfts",
         "acqdate": "22 March 2022",
@@ -99,6 +141,9 @@
     },
     {
         "id": "FK6ehXk2GDWLmMVH3gEATVJZxYsPnwgY26XN2AY12FQX",
+        "thumb": "theriders.png",
+        "artist": "Terra Nova",
+        "artisttwitter": "teranovaproject",
         "collection": "The Voyagers",
         "collectionurl": "https://formfunction.xyz/@terranova/series/the-voyagers",
         "acqdate": "30 March 2022",
@@ -106,6 +151,9 @@
     },
     {
         "id": "58j1AffACnBKNSQrad35goFV87FcrXkrW5dFZkiQqsV8",
+        "thumb": "act1scene2.png",
+        "artist": "Fallen x Jim Roll",
+        "artisttwitter": "",
         "collection": "The Illuminates",
         "collectionurl": "https://exchange.art/series/The%20Illuminates/nfts",
         "acqdate": "31 March 2022",
@@ -113,6 +161,9 @@
     },
     {
         "id": "BV2n91scAMCFszDRZU4duRTLyBenr8JnVSM9hxJUkGjz",
+        "thumb": "",
+        "artist": "Ilan Derech",
+        "artisttwitter": "IDerech",
         "collection": "Seconds of Life",
         "collectionurl": "https://formfunction.xyz/@ilanderech/series/seconds-of-life",
         "acqdate": "01 April 2022",
@@ -120,6 +171,9 @@
     },
     {
         "id": "4mpiND2P7y7RVbNRYmTGEGvb6ED12zpHGgUE8mc3yVTo",
+        "thumb": "",
+        "artist": "LoFronts",
+        "artisttwitter": "LoFronts",
         "collection": "LoFronts",
         "collectionurl": "https://formfunction.xyz/@LoFronts/series/lofronts",
         "acqdate": "06 April 2022",
@@ -127,6 +181,9 @@
     },
     {
         "id": "Bb2inEZTzb4vJ7hJDTq8soZUFxxojroQ6esrkpLEZtmt",
+        "thumb": "dawnpatrol.png",
+        "artist": "Johnny Jordan",
+        "artisttwitter": "byjohnnyjordan",
         "collection": "GM",
         "collectionurl": "https://formfunction.xyz/@byjohnnyjordan/series/gm",
         "acqdate": "11 April 2022",
@@ -134,6 +191,9 @@
     },
     {
         "id": "961gCBU5VZ7gWXoPguEfuB2PLW9Q8UAYX9W1dV6oAqKQ",
+        "thumb": "air1.png",
+        "artist": "Douglas McCurdy",
+        "artisttwitter": "douglasrmccurdy",
         "collection": "",
         "collectionurl": "",
         "acqdate": "14 April 2022",
@@ -141,6 +201,9 @@
     },
     {
         "id": "BN6usyTyUjA68koS7a95x8DPaRmyhrqL4HRHqt2nv44b",
+        "thumb": "cutofffromsalvation.png",
+        "artist": "Vartan",
+        "artisttwitter": "vartanfriedman",
         "collection": "",
         "collectionurl": "",
         "acqdate": "15 April 2022",
