@@ -1,10 +1,8 @@
-import { FC, useState } from "react";
+import { FC } from "react";
 import RealmsData from './realms.json';
 import styles from "./index.module.css";
 
-
 export const Realms: FC = ({}) => {
-
   function getRealmTitle(realm : any){
     var title = "#" + realm.number;
     if (realm?.collabartist){

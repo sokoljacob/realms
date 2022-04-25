@@ -1,6 +1,7 @@
 import { FC, useState, useEffect } from "react";
 import useSWR from "swr";
 import { EyeOffIcon } from "@heroicons/react/outline";
+import Link from "next/link";
 
 import { fetcher } from "utils/fetcher";
 
@@ -51,6 +52,12 @@ export const NftCard: FC<Props> = ({
         if (piece?.artisttwitter) details += "<a href='https://www.twitter.com/" + piece?.artisttwitter + "' target='_blank'>";
         details += piece?.artist;
         if (piece?.artisttwitter) details += "</a>";
+        if(piece?.artist2){
+          details += " x ";
+          if (piece?.artist2twitter) details += "<a href='https://www.twitter.com/" + piece?.artist2twitter + "' target='_blank'>";
+          details += piece?.artist2;
+          if (piece?.artist2twitter) details += "</a>";
+        }
       } 
       if(piece?.collection){
         details += "<br />Collection: ";
@@ -79,18 +86,29 @@ export const NftCard: FC<Props> = ({
     return ( null );
   } else {
     return (
-      <div className={`max-w-xs compact`}>
+      <div className="piece max-w-xs compact">
         <figure className="min-h-16 animation-pulse-color">
           {!fallbackImage || !error ? (
-            <a href={"/single/" + mint}>
-              <div className="hover-zoom-wrapper">
+            <div>
+              <div className="image-gridview">
+                <a href={"/single?pid=" + mint}>
+                  <div className="hover-zoom-wrapper">
+                    <img
+                      src={ getImageThumb(mint) }
+                      onError={onImageError}
+                      className="bg-gray-800 object-cover hover-zoom"
+                    />
+                  </div>
+                </a>
+              </div>
+              <div className="image-carouselview">
                 <img
-                  src={ getImageThumb(mint) }
+                  src={ image }
                   onError={onImageError}
-                  className="bg-gray-800 object-cover hover-zoom"
+                  className="bg-gray-800 object-cover"
                 />
               </div>
-            </a>
+            </div>
           ) : (
             // Fallback when preview isn't available
             // This could be broken image, video, or audio

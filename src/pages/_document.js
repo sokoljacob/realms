@@ -18,7 +18,7 @@ class MyDocument extends Document {
           <div className="bg-container">
             <div className="container mx-auto max-w-6xl p-8 2xl:px-0">
               <div className="text-center">
-                <h1 className="text-5xl font-bold header"><Link href="/">THE REALMS DAO</Link></h1>
+                <h1 className="text-5xl font-bold header siteHeader"><Link href="/">THE REALMS DAO</Link></h1>
               </div>
               {/* <div className="text-center pt-2">
                 <div className="text-center">

@@ -6,6 +6,7 @@
         "artisttwitter": "SolCultures",
         "collection": "",
         "collectionurl": "",
+        "acqnum": 1,
         "acqdate": "08 February 2022",
         "acqprice": "Gifted by Artist"
     },
@@ -16,6 +17,7 @@
         "artisttwitter": "PhibDoesThis",
         "collection": "Paper Worlds",
         "collectionurl": "https://exchange.art/series/Paper%20Worlds/nfts",
+        "acqnum": 2,
         "acqdate": "09 February 2022",
         "acqprice": "8 SOL"
     },
@@ -26,6 +28,7 @@
         "artisttwitter": "jimmy_agustyan",
         "collection": "",
         "collectionurl": "",
+        "acqnum": 3,
         "acqdate": "10 February 2022",
         "acqprice": "2 SOL"
     },
@@ -36,6 +39,7 @@
         "artisttwitter": "itsMcNatt",
         "collection": "Scratches",
         "collectionurl": "https://exchange.art/series/Scratches/nfts",
+        "acqnum": 4,
         "acqdate": "12 February 2022",
         "acqprice": "30 SOL"
     },
@@ -46,6 +50,7 @@
         "artisttwitter": "BadGnomen",
         "collection": "Origins",
         "collectionurl": "https://exchange.art/series/Origins/nfts",
+        "acqnum": 5,
         "acqdate": "17 February 2022",
         "acqprice": "7.26 SOL"
     },
@@ -56,6 +61,7 @@
         "artisttwitter": "HighwayNFT",
         "collection": "DUST",
         "collectionurl": "https://exchange.art/series/DUST%2077/nfts",
+        "acqnum": 6,
         "acqdate": "17 February 2022",
         "acqprice": "16.9 SOL"
     },
@@ -66,6 +72,7 @@
         "artisttwitter": "LIGHTS_nft",
         "collection": "Diamonds",
         "collectionurl": "https://exchange.art/series/Diamonds/nfts",
+        "acqnum": 7,
         "acqdate": "22 February 2022",
         "acqprice": "4.5 SOL"
     },
@@ -76,6 +83,7 @@
         "artisttwitter": "LIGHTS_nft",
         "collection": "In Gods Country",
         "collectionurl": "https://exchange.art/series/In%20God's%20Country/nfts",
+        "acqnum": 8,
         "acqdate": "23 February 2022",
         "acqprice": "Gifted by Artist"
     },
@@ -86,6 +94,7 @@
         "artisttwitter": "douglasrmccurdy",
         "collection": "Hoop World Vol. 1",
         "collectionurl": "https://exchange.art/series/Hoop%20World%20Vol.%201/nfts",
+        "acqnum": 9,
         "acqdate": "28 February 2022",
         "acqprice": "10 SOL"
     },
@@ -96,6 +105,7 @@
         "artisttwitter": "u__y__a__b",
         "collection": "",
         "collectionurl": "",
+        "acqnum": 10,
         "acqdate": "01 March 2022",
         "acqprice": "1.74 SOL"
     },
@@ -106,6 +116,7 @@
         "artisttwitter": "iamlaurael",
         "collection": "The Lurkers",
         "collectionurl": "https://exchange.art/series/The%20Lurkers/nfts",
+        "acqnum": 11,
         "acqdate": "03 March 2022",
         "acqprice": "29.55 SOL"
     },
@@ -116,6 +127,7 @@
         "artisttwitter": "basketNFT",
         "collection": "BSKT",
         "collectionurl": "https://exchange.art/series/BSKT/nfts",
+        "acqnum": 12,
         "acqdate": "10 March 2022",
         "acqprice": "15.53 SOL"
     },
@@ -126,6 +138,7 @@
         "artisttwitter": "archmorley",
         "collection": "Fragmented Expressions",
         "collectionurl": "https://formfunction.xyz/@archie/series/fragmented-expressions",
+        "acqnum": 13,
         "acqdate": "17 March 2022",
         "acqprice": "16.5 SOL"
     },
@@ -136,6 +149,7 @@
         "artisttwitter": "KrattStudio",
         "collection": "Divided",
         "collectionurl": "https://exchange.art/series/Divided/nfts",
+        "acqnum": 14,
         "acqdate": "22 March 2022",
         "acqprice": "6.9 SOL"
     },
@@ -146,16 +160,20 @@
         "artisttwitter": "teranovaproject",
         "collection": "The Voyagers",
         "collectionurl": "https://formfunction.xyz/@terranova/series/the-voyagers",
+        "acqnum": 15,
         "acqdate": "30 March 2022",
         "acqprice": "7.9 SOL"
     },
     {
         "id": "58j1AffACnBKNSQrad35goFV87FcrXkrW5dFZkiQqsV8",
         "thumb": "act1scene2.png",
-        "artist": "Fallen x Jim Roll",
-        "artisttwitter": "",
+        "artist": "Fallen",
+        "artisttwitter": "TheFallenSol",
+        "artist2": "Jim Roll",
+        "artist2twitter": "superjimmer",
         "collection": "The Illuminates",
         "collectionurl": "https://exchange.art/series/The%20Illuminates/nfts",
+        "acqnum": 16,
         "acqdate": "31 March 2022",
         "acqprice": "9 SOL"
     },
@@ -166,6 +184,7 @@
         "artisttwitter": "IDerech",
         "collection": "Seconds of Life",
         "collectionurl": "https://formfunction.xyz/@ilanderech/series/seconds-of-life",
+        "acqnum": 17,
         "acqdate": "01 April 2022",
         "acqprice": "5.5 SOL"
     },
@@ -176,6 +195,7 @@
         "artisttwitter": "LoFronts",
         "collection": "LoFronts",
         "collectionurl": "https://formfunction.xyz/@LoFronts/series/lofronts",
+        "acqnum": 18,
         "acqdate": "06 April 2022",
         "acqprice": "8 SOL"
     },
@@ -186,6 +206,7 @@
         "artisttwitter": "byjohnnyjordan",
         "collection": "GM",
         "collectionurl": "https://formfunction.xyz/@byjohnnyjordan/series/gm",
+        "acqnum": 19,
         "acqdate": "11 April 2022",
         "acqprice": "10 SOL"
     },
@@ -196,6 +217,7 @@
         "artisttwitter": "douglasrmccurdy",
         "collection": "",
         "collectionurl": "",
+        "acqnum": 20,
         "acqdate": "14 April 2022",
         "acqprice": "Gifted by Artist"
     },
@@ -206,6 +228,7 @@
         "artisttwitter": "vartanfriedman",
         "collection": "",
         "collectionurl": "",
+        "acqnum": 21,
         "acqdate": "15 April 2022",
         "acqprice": "Gifted by js"
     }

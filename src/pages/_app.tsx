@@ -63,10 +63,12 @@ function MyApp({ Component, pageProps }: AppProps) {
       </div>
       <div id="nav" className="sidenav">
         <Link href=""><a onClick={closeNav} className="closebtn">&times;</a></Link>
-        <Link href="/"><a onClick={closeNav}>HOME</a></Link>
-        <Link href="/realms"><a onClick={closeNav}>REALMS</a></Link>
-        <Link href="/gallery"><a onClick={closeNav}>COMMUNITY GALLERY</a></Link>
-        <Link href="/join"><a onClick={closeNav}>JOIN</a></Link>
+        <Link href="/"><a className="navMenuOption" onClick={closeNav}>HOME</a></Link>
+        <Link href="/realms"><a className="navMenuOption" onClick={closeNav}>REALMS</a></Link>
+        <Link href="/gallery"><a className="navMenuOption" onClick={closeNav}>COMMUNITY GALLERY</a></Link>
+        <Link href="/artistspotlight"><a className="navMenuOption" onClick={closeNav}>ARTIST SPOTLIGHTS</a></Link>
+        <Link href="/join"><a className="navMenuOption" onClick={closeNav}>JOIN</a></Link>
+        <Link href="/dao"><a className="navMenuOption" onClick={closeNav}>DAO</a></Link>
       </div>
       <ConnectionProvider endpoint={endpoint}>
         <WalletProvider>
