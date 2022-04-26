@@ -1,12 +1,9 @@
 import Link from "next/link";
 import { FC } from "react";
-import { useWallet } from "@solana/wallet-adapter-react";
 
 import styles from "./index.module.css";
 
 export const HomeView: FC = ({}) => {
-  const { publicKey } = useWallet();
-  
   return (
     <div className="home-content">
       <div className="left-home-image">

@@ -1,12 +1,8 @@
 import Link from "next/link";
 import { FC } from "react";
-import { useWallet } from "@solana/wallet-adapter-react";
-
 import styles from "./index.module.css";
 
 export const JoinRealms: FC = ({}) => {
-  const { publicKey } = useWallet();
-  
   return (
     <div className="join-content">
       	<div className="left-content">

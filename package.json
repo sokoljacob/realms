@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@blazity/next-image-proxy": "^1.0.2",
     "@heroicons/react": "^1.0.5",
     "@nfteyez/sol-rayz-react": "^0.8.2",
     "@project-serum/anchor": "^0.19.1-beta.1",

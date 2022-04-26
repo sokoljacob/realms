@@ -97,8 +97,7 @@ export const CommunityGallery: FC = ({}) => {
     } 
   }
 
-
-  console.log("nfts", nfts);
+  // console.log("nfts", nfts);
 
   return (
       <div className="container mx-auto 2xl:px-0">
@@ -195,13 +194,9 @@ const NftList = ({ nfts, error }: NftListProps) => {
         orderedNfts[nextAvail] = nfts[i];
         nextAvail++;
       }
-      
     }
-    
   }
-
   
-
   return (
     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 items-start" id="pieces-container">
       {orderedNfts?.map((nft) => (

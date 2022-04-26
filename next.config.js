@@ -43,6 +43,13 @@ const plugins = [
 const nextConfig = {
   distDir: "build",
   swcMinify: true,
+  images: {
+    domains: [
+      'www.arweave.net',
+      'arweave.net',
+      'ipfs.io'
+    ],
+  },
   webpack: (config, { isServer }) => {
     if (!isServer) {
       config.resolve.fallback.fs = false;

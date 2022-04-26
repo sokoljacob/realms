@@ -2,6 +2,8 @@ import { FC, useState, useEffect } from "react";
 import useSWR from "swr";
 import { EyeOffIcon } from "@heroicons/react/outline";
 import Link from "next/link";
+import Image from 'next/image'
+import NextImage from 'next/image';
 
 import { fetcher } from "utils/fetcher";
 
@@ -42,7 +44,7 @@ export const NftCard: FC<Props> = ({
   }, [data, error]);
 
   const onImageError = () => setFallbackImage(true);
-  const { image, description } = data ?? {};
+  const { image, description, animation_url } = data ?? {};
 
    function getPieceDetails(mint: any){
       let piece = PieceData.find((piece: any) => piece.id === mint); 
@@ -78,8 +80,21 @@ export const NftCard: FC<Props> = ({
 
   function getImageThumb(mint: any){
     let piece = PieceData.find((piece: any) => piece.id === mint); 
-    if (piece?.thumb) return "gallerythumbs/" + piece?.thumb
-    return image
+    let imgurl:string = image;
+    if (piece?.thumb){
+      return <Image src={ "/gallerythumbs/" + piece?.thumb } onError={onImageError}  width="300" height="300" className="bg-gray-800 object-cover hover-zoom" priority />
+    }  
+    else if (imgurl.includes("ipfs.dweb.link")) {
+      return <NextImage src={"/api/imageProxy?imageUrl=" + image} width={300} height={300}  className="bg-gray-800 object-cover hover-zoom" onError={onImageError} />
+    } else {
+      return <Image src={ image } onError={onImageError}  width="300" height="300" className="bg-gray-800 object-cover hover-zoom" priority />
+    }
+  }
+
+  function getCarouselImg(){
+    if(animation_url) return <video controls><source src={animation_url} type="video/mp4" /></video>
+    return <img src={ image } onError={onImageError} className="bg-gray-800 object-cover" />
+    
   }
 
   if(!image || name === 'EXCHANGE NOTIFICATION NFT' || name === 'Realms #19 x Atoll'){
@@ -93,20 +108,12 @@ export const NftCard: FC<Props> = ({
               <div className="image-gridview">
                 <a href={"/single?pid=" + mint}>
                   <div className="hover-zoom-wrapper">
-                    <img
-                      src={ getImageThumb(mint) }
-                      onError={onImageError}
-                      className="bg-gray-800 object-cover hover-zoom"
-                    />
+                    {getImageThumb(mint)}
                   </div>
                 </a>
               </div>
               <div className="image-carouselview">
-                <img
-                  src={ image }
-                  onError={onImageError}
-                  className="bg-gray-800 object-cover"
-                />
+                { getCarouselImg() }
               </div>
             </div>
           ) : (
