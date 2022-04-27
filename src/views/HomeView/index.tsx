@@ -21,6 +21,7 @@ export const HomeView: FC = ({}) => {
         <br />
         <h1 className="mb-5 text-3xl font-bold">What art will be purchased with the community fund?</h1>
         <div className="indent font-bold">It's up to you! Together, we will discuss and vote on which art/artist we want to pursue. 1 Realm = 1 vote.</div>
+        <br /><br />
       </div>
     </div>
   );

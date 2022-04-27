@@ -16,6 +16,7 @@ export const JoinRealms: FC = ({}) => {
 				<br /><br />
 				<Link href="https://discord.gg/9v3pAw6J"><a target="_blank">Join our Discord</a></Link> if you have any questions or want to network with the Realms holders. We won't bite!
 			</div>
+			<br /><br />
 		</div>
 		<div className="right-join-image">
 			<img id="joinwhiteimg" src="/joinbg-white.png"></img>

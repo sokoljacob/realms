@@ -9,6 +9,25 @@ body {
   overflow-x:hidden;
   background-color: #fff;
   color: #000;
+
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.home-content, .join-content, .container{
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+   }
 }
 
 .dark body{
@@ -52,22 +71,12 @@ code {
     monospace;
 }
 
-/* .navTable{
-  width:100%;
-}
-
-.navTableItem{
-  width:25%;
-  text-align:center;
-} */
-
 .navMenu{
   position:absolute;
   top:22px;
   right:25px;
   font-size:2.5em;
   cursor:pointer;
-  font-family: monospace;
 }
 
 .navMenuOption{
@@ -75,12 +84,41 @@ code {
   margin-bottom:10px;
 }
 
-.navMenu span:hover{
-  color:#1a9bf0;
+.navMenu span{
+  display:inline-block;
+  max-width:32px;
 }
 
-.dark .navMenu span:hover{
-  color:#f41711;
+#modeBtn img{
+  content:url("/moon-black.png");
+}
+
+.dark #modeBtn img{
+  content:url("/sun-white.png");
+}
+
+#modeBtn img:hover{
+  content:url("/moon-blue.png");
+}
+
+.dark #modeBtn img:hover{
+  content:url("/sun-red.png");
+}
+
+#navBtn img{
+  content:url("/menu-black.png");
+}
+
+.dark #navBtn img{
+  content:url("/menu-white.png");
+}
+
+#navBtn img:hover{
+  content:url("/menu-blue.png");
+}
+
+.dark #navBtn img:hover{
+  content:url("/menu-red.png");
 }
 
 .sidenav {
@@ -323,6 +361,9 @@ img.hover-zoom:hover {
   .navMenu{
     top:25px;
     font-size:1.75em;
+  }
+  .navMenu span{
+    max-width:26px;
   }
   .siteHeader{
     font-size:1.75em;
