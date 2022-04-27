@@ -97,7 +97,7 @@ export const NftCard: FC<Props> = ({
     
   }
 
-  if(!image || name === 'EXCHANGE NOTIFICATION NFT' || name === 'Realms #19 x Atoll'){
+  if(!image || name === 'EXCHANGE NOTIFICATION NFT' || name === 'Realms #19 x Atoll'|| name === 'Solaris #3105'){
     return ( null );
   } else {
     return (
