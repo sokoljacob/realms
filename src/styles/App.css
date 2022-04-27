@@ -244,6 +244,14 @@ code {
   width: 10%;
   margin-left: 5%;
 }
+@media all and (max-width: 767px) {
+  .carousel-left{
+    margin-top:15vh;
+  }
+  .carousel-right{
+    margin-top:15vh;
+  }
+}
 
 .carousel-left-hidden, .carousel-right-hidden{
   display: none;
@@ -271,7 +279,7 @@ code {
 .pieces-container-single .image-carouselview img, .pieces-container-single .image-carouselview video{
   margin: 0 auto;
   width: auto;
-  max-height:85vh;
+  max-height:75vh;
 }
 
 .piece-single .image-gridview{

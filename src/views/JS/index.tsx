@@ -105,7 +105,7 @@ export const JS: FC = ({}) => {
           <div className="text-center hero-content w-full">
             <div className="w-full">
               <h1 className="mb-5 text-3xl font-bold">
-                JS'S PERSONAL GALLERY
+                JS' PERSONAL GALLERY
               </h1>
               <div>
                 <div className="flex items-center justify-center w-full mb-12">
