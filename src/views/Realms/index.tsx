@@ -1,6 +1,7 @@
 import { FC } from "react";
 import RealmsData from './realms.json';
 import styles from "./index.module.css";
+import Image from 'next/image'
 
 export const Realms: FC = ({}) => {
   function getRealmTitle(realm : any){
@@ -53,7 +54,7 @@ export const Realms: FC = ({}) => {
                       return (
                         <div className="max-w-xs compact" key={ realm.id }>
                           <figure className="min-h-16 animation-pulse-color">
-                              <img src={ "/realmthumbs/" + realm.thumb } className="bg-gray-800 object-cover" />
+                              <Image src={ "/realmthumbs/" + realm.thumb } placeholder="blur" blurDataURL="/looky.gif" width="300" height="300" className="bg-gray-800 object-cover" />
                           </figure>
                           <div className="piece-body">
                             <h2 className="piece-title text-center" dangerouslySetInnerHTML={{ __html: getRealmTitle(realm) }}></h2>
