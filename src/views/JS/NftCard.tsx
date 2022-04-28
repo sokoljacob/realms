@@ -94,10 +94,10 @@ export const NftCard: FC<Props> = ({
   function getGridImg(){
     let imgurl:string = image;
     if(imgurl.includes("ipfs.dweb.link")){
-      return <NextImage id={mint} src={"/api/imageProxy?imageUrl=" + image} width={300} height={300}  className="bg-gray-800 object-cover hover-zoom" onError={onImageError} />
+      return <NextImage id={mint} src={"/api/imageProxy?imageUrl=" + image} placeholder="blur" blurDataURL="/looky.gif" width={300} height={300} className="bg-gray-800 object-cover hover-zoom" onError={onImageError} />
     }
     else {
-      return <Image id={mint} src={ image } onError={onImageError}  width="300" height="300" className="bg-gray-800 object-cover hover-zoom" />
+      return <Image id={mint} src={ image } onError={onImageError} placeholder="blur" blurDataURL="/looky.gif" width="300" height="300" className="bg-gray-800 object-cover hover-zoom" />
     }
   }
 

@@ -82,12 +82,12 @@ export const NftCard: FC<Props> = ({
     let piece = PieceData.find((piece: any) => piece.id === mint); 
     let imgurl:string = image;
     if (piece?.thumb){
-      return <Image src={ "/gallerythumbs/" + piece?.thumb } onError={onImageError}  width="300" height="300" className="bg-gray-800 object-cover hover-zoom" priority />
+      return <Image src={ "/gallerythumbs/" + piece?.thumb } onError={onImageError} placeholder="blur" blurDataURL="/looky.gif" width="300" height="300" className="bg-gray-800 object-cover hover-zoom" priority />
     }  
     else if (imgurl.includes("ipfs.dweb.link")) {
-      return <NextImage src={"/api/imageProxy?imageUrl=" + image} width={300} height={300}  className="bg-gray-800 object-cover hover-zoom" onError={onImageError} />
+      return <NextImage src={"/api/imageProxy?imageUrl=" + image} width={300} height={300} placeholder="blur" blurDataURL="/looky.gif" className="bg-gray-800 object-cover hover-zoom" onError={onImageError} />
     } else {
-      return <Image src={ image } onError={onImageError}  width="300" height="300" className="bg-gray-800 object-cover hover-zoom" priority />
+      return <Image src={ image } onError={onImageError} placeholder="blur" blurDataURL="/looky.gif" width="300" height="300" className="bg-gray-800 object-cover hover-zoom" priority />
     }
   }
 
