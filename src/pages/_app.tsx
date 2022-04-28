@@ -60,9 +60,9 @@ function MyApp({ Component, pageProps }: AppProps) {
         {/* <span id="modeBtn" onClick={setColorMode}>&#9728;&#xFE0E;</span>
         &nbsp;&nbsp;
         <span onClick={openNav}>&#9776;&#xFE0E;</span> */}
-        <span id="modeBtn" onClick={setColorMode}><img /></span>
+        <span id="modeBtn"><img onClick={setColorMode} /></span>
         &nbsp;&nbsp;
-        <span id="navBtn" onClick={openNav}><img /></span>
+        <span id="navBtn"><img onClick={openNav} /></span>
       </div>
       <div id="nav" className="sidenav">
         <Link href=""><a onClick={closeNav} className="closebtn">&times;</a></Link>
