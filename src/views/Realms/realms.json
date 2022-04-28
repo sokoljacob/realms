@@ -231,8 +231,19 @@
         "ownertwitter": "cryptotrees"
     },
     {
+        "id": "22",
+        "number": "22",
+        "thumb": "22.png",
+        "collabartist": "",
+        "collabartisttwitter": "",
+        "unreleased": "",
+        "owner": "Manc",
+        "ownerpersonalgal": "",
+        "ownertwitter": "manc_nft"
+    },
+    {
         "id": "unreleased1",
-        "number": "22-63",
+        "number": "23-63",
         "thumb": "unknownrealm.png",
         "collabartist": "",
         "collabartisttwitter": "",
